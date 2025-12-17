@@ -1,5 +1,6 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+// IMPORTANTE: Se agrega 'Variants' aquí para evitar el error de TypeScript en Vercel
+import { motion, Variants } from 'framer-motion';
 import { 
   MapPin, 
   UtensilsCrossed, 
@@ -15,34 +16,36 @@ import {
   Music
 } from 'lucide-react';
 
-// --- CONFIGURACIÓN DE IMÁGENES (URLs Maestras Estables) ---
+// --- CONFIGURACIÓN DE IMÁGENES ---
 const IMAGES = {
   hero: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop",
-  
-  // NUEVA (Chef): Enfocada en manos trabajando, muy estética y estable
   concept: "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?q=80&w=1277&auto=format&fit=crop", 
-  
-  dish1: "https://images.unsplash.com/photo-1579871494447-9811cf80d66c?q=80&w=800", // Sushi
-  dish2: "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?q=80&w=800", // Ramen
-  dish3: "https://images.unsplash.com/photo-1553621042-f6e147245754?q=80&w=800", // Grill
-  
-  // NUEVA (Drink): El cocktail más famoso de Unsplash (nunca falla)
+  dish1: "https://images.unsplash.com/photo-1579871494447-9811cf80d66c?q=80&w=800",
+  dish2: "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?q=80&w=800",
+  dish3: "https://images.unsplash.com/photo-1553621042-f6e147245754?q=80&w=800",
   dish4: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=800", 
 };
 
 // --- MANEJO DE ERRORES DE IMAGEN ---
-// Si una imagen falla, carga esta automáticamente
 const handleImageError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
-  e.currentTarget.src = "https://images.unsplash.com/photo-1550966871-3ed3c47e2ce2?q=80&w=600"; // Imagen genérica de comida oscura
+  e.currentTarget.src = "https://images.unsplash.com/photo-1550966871-3ed3c47e2ce2?q=80&w=600";
 };
 
-// --- ANIMACIONES ---
-const fadeIn = {
+// --- ANIMACIONES (TIPADAS CORRECTAMENTE) ---
+// El tipado ': Variants' soluciona el error de build en Vercel
+const fadeIn: Variants = {
   hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
+  visible: { 
+    opacity: 1, 
+    y: 0, 
+    transition: { 
+      duration: 0.8, 
+      ease: "easeOut" 
+    } 
+  }
 };
 
-const staggerContainer = {
+const staggerContainer: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -62,7 +65,6 @@ const Navbar = () => (
         <a href="#concept" className="hover:text-primary transition-colors">CONCEPT</a>
         <a href="#menu" className="hover:text-primary transition-colors">MENU</a>
         <a href="#location" className="hover:text-primary transition-colors">LOCATION</a>
-        {/* BOTÓN WHATSAPP */}
         <button 
           onClick={() => window.open('https://wa.me/523345353545?text=Hola%20Yoru%20Kitchen,%20quisiera%20reservar%20una%20mesa.', '_blank')}
           className="bg-white text-black px-5 py-2 rounded-sm font-bold hover:bg-gray-200 transition-colors"
@@ -263,7 +265,7 @@ const MenuPreview = () => (
 const LocationMap = () => (
   <section id="location" className="w-full h-[400px] md:h-[500px] bg-surface relative grayscale hover:grayscale-0 transition-all duration-700 group">
     <iframe 
-      src="http://googleusercontent.com/maps.google.com/6"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.828030578688!2d139.6993256762319!3d35.68123617258712!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188cd0d6b1ba1f%3A0x1c32a1f1ecacfdd5!2sShinjuku%20City%2C%20Tokyo%2C%20Japan!5e0!3m2!1sen!2smx!4v1709123456789!5m2!1sen!2smx"
       width="100%" 
       height="100%" 
       style={{ border: 0, filter: 'invert(90%) hue-rotate(180deg)' }} 
