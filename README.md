@@ -1,73 +1,32 @@
-# React + TypeScript + Vite
+#  Yoru Kitchen - Modern Japanese Dining
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A dark-themed, modern landing page concept for an urban Japanese restaurant. I designed and developed this as a portfolio piece for freelance gigs to demonstrate branding and web development capabilities in the gastronomic sector.
 
-Currently, two official plugins are available:
+The focus of this project was capturing a "night-time energy" vibe through a sleek UI, bold typography, and a responsive layout that looks great on any device.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**[  View Live Demo ](https://yoru-template.vercel.app/)**
 
-## React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Tech Stack
+* **React** — UI components
+* **TypeScript** — Predictable and maintainable code
+* **Tailwind CSS** — Rapid styling and responsive design implementation
+* **Vite** — Fast frontend tooling and development server
 
-## Expanding the ESLint configuration
+### The Design Approach
+The main challenge was balancing a highly visual, dark-mode aesthetic with accessibility and readability. I focused heavily on contrast, using striking red accents to guide the user's eye toward calls to action (like the "Book a Table" and "View Our Menu" buttons) without overwhelming the photography.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+###  Run it locally
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+```bash
+# Clone the repo
+git clone [https://github.com/ChimoZX/NOMBRE-DE-TU-REPO-AQUI.git](https://github.com/ChimoZX/NOMBRE-DE-TU-REPO-AQUI.git)
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+# Go into the project
+cd NOMBRE-DE-TU-REPO-AQUI
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+# Install dependencies
+npm install
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+# Start the dev server
+npm run dev
