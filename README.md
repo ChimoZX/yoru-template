@@ -20,7 +20,7 @@ The main challenge was balancing a highly visual, dark-mode aesthetic with acces
 
 ```bash
 # Clone the repo
-git clone [https://github.com/ChimoZX/yoru-template.git](https://github.com/ChimoZX/yoru-template.git)
+git clone https://github.com/ChimoZX/yoru-template.git
 
 # Go into the project
 cd NOMBRE-DE-TU-REPO-AQUI
