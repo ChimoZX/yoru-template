@@ -16,7 +16,7 @@ import {
   Music
 } from 'lucide-react';
 
-// --- CONFIGURACIÓN DE IMÁGENES ---
+
 const IMAGES = {
   hero: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop",
   concept: "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?q=80&w=1277&auto=format&fit=crop", 
@@ -26,13 +26,11 @@ const IMAGES = {
   dish4: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=800", 
 };
 
-// --- MANEJO DE ERRORES DE IMAGEN ---
+
 const handleImageError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
   e.currentTarget.src = "https://images.unsplash.com/photo-1550966871-3ed3c47e2ce2?q=80&w=600";
 };
 
-// --- ANIMACIONES (TIPADAS CORRECTAMENTE) ---
-// El tipado ': Variants' soluciona el error de build en Vercel
 const fadeIn: Variants = {
   hidden: { opacity: 0, y: 30 },
   visible: { 
@@ -53,7 +51,6 @@ const staggerContainer: Variants = {
   }
 };
 
-// --- COMPONENTES ---
 
 const Navbar = () => (
   <nav className="fixed top-0 w-full z-50 bg-background/90 backdrop-blur-md border-b border-white/5">
@@ -365,7 +362,7 @@ const Footer = () => (
   </footer>
 );
 
-// --- APP PRINCIPAL ---
+
 
 function App() {
   return (
