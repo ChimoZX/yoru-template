@@ -1,5 +1,5 @@
 import React from 'react';
-// IMPORTANTE: Se agrega 'Variants' aquí para evitar el error de TypeScript en Vercel
+
 import { motion, Variants } from 'framer-motion';
 import { 
   MapPin, 
