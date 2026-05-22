@@ -4,7 +4,7 @@ A dark-themed, modern landing page concept for an urban Japanese restaurant. I d
 
 The focus of this project was capturing a "night-time energy" vibe through a sleek UI, bold typography, and a responsive layout that looks great on any device.
 
-**[  View Live Demo ](https://yoru-template.vercel.app/)**
+**[  View  ](https://yoru-template.vercel.app/)**
 
 
 ### Tech Stack
@@ -13,8 +13,7 @@ The focus of this project was capturing a "night-time energy" vibe through a sle
 * **Tailwind CSS** — Rapid styling and responsive design implementation
 * **Vite** — Fast frontend tooling and development server
 
-### The Design Approach
-The main challenge was balancing a highly visual, dark-mode aesthetic with accessibility and readability. I focused heavily on contrast, using striking red accents to guide the user's eye toward calls to action (like the "Book a Table" and "View Our Menu" buttons) without overwhelming the photography.
+
 
 ###  Run it locally
 
